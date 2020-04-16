@@ -3,17 +3,17 @@
 valid = False
 
 while valid == False:
-    chosen_attack = input("What are you going to do? (Rock, Paper or Scissors)? ").lower()
+    chosen_action = input("What are you going to do? (Rock, Paper or Scissors)? ").lower()
 
-    if chosen_attack == "rock" or chosen_attack == "r":
+    if chosen_action == "rock" or chosen_action == "r":
         print("You chose Rock")
         valid = True
 
-    elif chosen_attack == "paper" or chosen_attack == "p":
+    elif chosen_action == "paper" or chosen_action == "p":
         print("You chose Paper")
         valid = True
 
-    elif chosen_attack == "scissors" or chosen_attack == "s":
+    elif chosen_action == "scissors" or chosen_action == "s":
         print("You chose Scissors")
         valid = True
 
