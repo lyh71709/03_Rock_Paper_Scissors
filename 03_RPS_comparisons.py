@@ -21,6 +21,8 @@ while valid == False:
             print("The computer used Scissors")
             print("You Won!")
 
+        valid = True
+
     elif chosen_action == "paper":
 
         if cpu_action == "rock":
@@ -34,6 +36,8 @@ while valid == False:
         else:
             print("The computer used Scissors")
             print("Sorry you lost")
+
+        valid = True
 
     elif chosen_action == "scissors":
 
@@ -49,9 +53,9 @@ while valid == False:
             print("The computer used Scissors")
             print("It was a draw")
 
+        valid = True
+
     else:
         print("Please enter either Rock, Paper or Scissors")
 
     print()
-
-

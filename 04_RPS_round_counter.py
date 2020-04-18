@@ -4,10 +4,22 @@
 # Check that the user input is an even number so there will never be a tie
 # Ensure that the number of rounds is printed
 
+def intcheck(question):
+    while True:
+        try:
+            response = int(input(question))
+
+            return response
+
+        except ValueError:
+            print("Please enter an integer, and remember it needs to be odd.")
+            print()
+            continue
+
 round_continue = "yes"
 
 while round_continue == "yes":
-    rounds = int(input("The game will be best out of what (Must be an odd number)? "))
+    rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
 
     if (rounds % 2) == 1:
         rounds_played = 0
