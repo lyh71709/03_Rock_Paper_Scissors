@@ -10,15 +10,15 @@ while valid == False:
     if chosen_action == "rock":
 
         if cpu_action == "rock":
-            print("The computer used Rock")
+            print("The computer used {}".format(cpu_action))
             print("It was a draw")
 
         elif cpu_action == "paper":
-            print("The computer used Paper")
+            print("The computer used {}".format(cpu_action))
             print("Sorry you lost")
 
         else:
-            print("The computer used Scissors")
+            print("The computer used {}".format(cpu_action))
             print("You Won!")
 
         valid = True
@@ -26,15 +26,15 @@ while valid == False:
     elif chosen_action == "paper":
 
         if cpu_action == "rock":
-            print("The computer used Rock")
+            print("The computer used {}".format(cpu_action))
             print("You Won!")
 
         elif cpu_action == "paper":
-            print("The computer used Paper")
+            print("The computer used {}".format(cpu_action))
             print("It was a draw")
 
         else:
-            print("The computer used Scissors")
+            print("The computer used {}".format(cpu_action))
             print("Sorry you lost")
 
         valid = True
@@ -42,15 +42,15 @@ while valid == False:
     elif chosen_action == "scissors":
 
         if cpu_action == "rock":
-            print("The computer used Rock")
+            print("The computer used {}".format(cpu_action))
             print("Sorry you lost")
 
         elif cpu_action == "paper":
-            print("The computer used Paper")
+            print("The computer used {}".format(cpu_action))
             print("You Win!")
 
         else:
-            print("The computer used Scissors")
+            print("The computer used {}".format(cpu_action))
             print("It was a draw")
 
         valid = True

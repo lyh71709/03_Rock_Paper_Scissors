@@ -18,6 +18,7 @@ user_score = 0
 
 rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
 win = ((rounds//2)+1)
+print("You need {} wins to win".format(win))
 
 while round_continue == "yes":
 
@@ -40,62 +41,65 @@ while round_continue == "yes":
                 print("Round {}".format(rounds_played + 1))
 
                 valid = False
-                action = ["Rock", "Paper", "Scissors"]
+                action = ["rock", "paper", "scissors"]
 
                 while valid == False:
                     chosen_action = input("What are you going to do (Rock/Paper/Scissors)? ").lower()
                     cpu_action = "rock"
 
                     if chosen_action == "rock":
+                        rounds_played += 1
 
                         if cpu_action == "rock":
-                            print("The computer used Rock")
+                            print("The computer used {}".format(cpu_action))
                             print("It was a draw")
 
                         elif cpu_action == "paper":
-                            print("The computer used Paper")
+                            print("The computer used {}".format(cpu_action))
                             print("Sorry you lost")
                             cpu_score += 1
 
                         else:
-                            print("The computer used Scissors")
+                            print("The computer used {}".format(cpu_action))
                             print("You Won!")
                             user_score += 1
 
                         valid = True
 
                     elif chosen_action == "paper":
+                        rounds_played += 1
 
                         if cpu_action == "rock":
-                            print("The computer used Rock")
+                            print("The computer used {}".format(cpu_action))
                             print("You Won!")
                             user_score += 1
 
                         elif cpu_action == "paper":
-                            print("The computer used Paper")
+                            print("The computer used {}".format(cpu_action))
                             print("It was a draw")
 
                         else:
-                            print("The computer used Scissors")
+                            print("The computer used {}".format(cpu_action))
                             print("Sorry you lost")
                             cpu_score += 1
 
                         valid = True
 
                     elif chosen_action == "scissors":
+                        rounds_played += 1
 
                         if cpu_action == "rock":
-                            print("The computer used Rock")
+                            print("The computer used {}".format(cpu_action))
                             print("Sorry you lost")
                             cpu_score += 1
 
                         elif cpu_action == "paper":
-                            print("The computer used Paper")
+                            print("The computer used {}".format(cpu_action))
                             print("You Win!")
                             user_score += 1
 
                         else:
-                            print("The computer used Scissors")
+                            print("The computer used {}".format(cpu_action))
                             print("It was a draw")
 
                         valid = True
@@ -104,7 +108,6 @@ while round_continue == "yes":
                         print("Please enter either Rock, Paper or Scissors")
 
                     print()
-                    rounds_played += 1
 
         else:
             print("Please enter an odd number as to ensure no ties")
