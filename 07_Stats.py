@@ -1,18 +1,14 @@
 # RPS Component 7 - Get  game summary to show the user
 
-game_stats = [0, 1, 0, 1, 0]
+game_summary = ["User Win", "CPU Win", "User Win", "CPU Win", "User Win"]
 
 
 
 # print game outcomes
 print("Outcome for Each Round")
 list_count = 1
-for item in game_stats:
-    if item == 0:
-        message = "User Win"
-    elif item == 1:
-        message = "CPU Win"
-    print("Round {}: {}".format(list_count, message))
+for item in game_summary:
+    print("Round {}: {}".format(list_count, item))
     list_count += 1
 
 

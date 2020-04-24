@@ -1,5 +1,4 @@
-# RPS Component 5 - Win / Loss Mechanics
-# V2 - Win / Loss Mechanics but using the code from comparisons_v2
+# RPS Component 8 - Loop Mechanics
 
 def intcheck(question):
     while True:
@@ -16,6 +15,11 @@ def intcheck(question):
 round_continue = "yes"
 cpu_score = 0
 user_score = 0
+
+how_many_games = input("How many games would you like to play? (There is also a continuous play mode where you keep on playing until whenever you want, just enter 'continuous') ")
+
+if how_many_games == "continuous":
+    
 
 rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
 win = ((rounds//2)+1)
@@ -86,3 +90,4 @@ while round_continue == "yes":
         else:
             print("Please enter an odd number as to ensure no ties")
             print()
+
