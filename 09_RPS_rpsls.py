@@ -1,4 +1,6 @@
-# RPS Component 8 - Loop Mechanics
+# RPS Component 9 - Implementing Rock, Paper, Scissors, Lizard, Spock
+# For this I think the method of comparisons v2 is better for this than writing a bunch of if statements
+# Give users an option at the beginning of the game to either play RPS or RPSLS
 
 def intcheck(question):
     while True:
@@ -22,11 +24,11 @@ while valid2 == False:
         print()
     elif games_play > 2:
         print("Please enter either one for Round Play or two for Continuous Play ")
-        print()
         continue
     else:
         valid2 = True
 
+print()
 games_played = 0
 keep_going = ""
 while keep_going == "":
@@ -62,10 +64,10 @@ while keep_going == "":
                     print("Round {}".format(rounds_played + 1))
 
                     valid = False
-                    action = ["rock", "paper", "scissors"]
+                    action = ["rock", "paper", "scissors", "lizard", "spock"]
 
                     while valid == False:
-                        chosen_action = input("What are you going to do (Rock/Paper/Scissors)? ").lower()
+                        chosen_action = input("What are you going to do (Rock/Paper/Scissors/Lizard/Spock)? ").lower()
                         cpu_action = "rock"
                         game_outcome = 0
 
@@ -75,6 +77,10 @@ while keep_going == "":
                             game_outcome += 2
                         elif chosen_action == "scissors":
                             game_outcome += 1
+                        elif chosen_action == "lizard":
+                            game_outcome += 4
+                        elif chosen_action == "spock":
+                            game_outcome += 5
                         else:
                             print("Please enter either Rock, Paper or Scissors")
                             print()
@@ -84,13 +90,17 @@ while keep_going == "":
                             game_outcome -= 3
                         elif cpu_action == "paper":
                             game_outcome -= 2
-                        else:
+                        elif cpu_action == "scissors":
                             game_outcome -= 1
+                        elif cpu_action == "lizard":
+                            game_outcome -= 4
+                        else:
+                            game_outcome -= 5
 
                         if game_outcome == 0:
                             print("The computer used {}".format(cpu_action))
                             print("It was a draw")
-                        elif game_outcome == 1 or game_outcome == -2:
+                        elif game_outcome == 1 or game_outcome == -2 or game_outcome == -4 or game_outcome == 3:
                             print("The computer used {}".format(cpu_action))
                             print("Sorry you lost")
                             cpu_score += 1
@@ -100,7 +110,7 @@ while keep_going == "":
                             user_score += 1
 
                         valid = True
-                        rounds_played += 1
+
                         print()
             else:
                 print("Please enter an odd number as to ensure no ties")
