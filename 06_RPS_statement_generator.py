@@ -17,18 +17,31 @@ elif cpu_action == "paper":
 elif cpu_action == "scissors":
     cpu_icon = "✂"
 
-def rps_statement(statement, char):
+def rps_statement1(statement, char):
     print()
     print(char*(len(statement)+12))
     print("{} \ {}  | {}".format(user_icon, cpu_icon, statement))
     print(char*(len(statement)+12))
     print()
 
-print()
-win = rps_statement("You Win!!!","-")
+def rps_statement2(statement, char):
+    print()
+    print(char*len(statement))
+    print(statement)
+    print(char*len(statement))
+    print()
 
 print()
-lose = rps_statement("Sorry you lost", "-")
+win = rps_statement1("You Win!!!","-")
 
 print()
-draw = rps_statement("It was a draw", "-")
+lose = rps_statement1("Sorry you lost", "-")
+
+print()
+draw = rps_statement1("It was a draw", "-")
+
+print()
+round_start = rps_statement2("         Round 1         ", "=")
+
+print()
+game_start = rps_statement2("          Game 1         ", "◾")
