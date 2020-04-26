@@ -12,11 +12,12 @@ print("The game is basically Rock, Paper, Scissors, with a couple touches.\n"
       "A couple things you should know putting the first letter of an action is fine\n"
       "For example for rock you can put in 'r' or for continuous you can put in c and so and so.\n"
       "")
-rpsls_help = input("Do you want me to tell you how 'Rock, Paper, Scissors, Lizard, Spock' works (Yes or No)?").lower()
+rpsls_help = input("Do you want me to tell you how 'Rock, Paper, Scissors, Lizard, Spock' works (Yes or No)? ").lower()
 
 if rpsls_help == "yes" or rpsls_help == "y":
-    print("Scissors cuts Paper,\n"
-          " Paper covers Rock,\n"
+      print()
+      print("Well, Scissors cuts Paper,\n"
+          "Paper covers Rock,\n"
           "Rock crushes Lizard,\n"
           "Lizard poisons Spock,\n"
           "Spock smashes Scissors,\n"
@@ -25,10 +26,14 @@ if rpsls_help == "yes" or rpsls_help == "y":
           "Paper disproves Spock,\n"
           "Spock vaporizes Rock,\n"
           "and as it always has, Rock crushes Scissors,\n"
+            "\n"
           "Now let the game begin!")
+
 elif rpsls_help == "no" or rpsls_help == "n":
-    print("OK then let the game begin!")
+      print()
+      print("OK then let the game begin!")
 else:
-    print("You didn't put yes so i'm gonna take it as a no,\n"
+      print()
+      print("You didn't put yes so i'm gonna take it as a no,\n"
           "Now let the game begin!")
 

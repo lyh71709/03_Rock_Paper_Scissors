@@ -25,6 +25,7 @@ while valid2 == False:
         print("Please enter either round or continuous ")
         continue
 
+game_summary = []
 print()
 games_played = 0
 keep_going = ""
@@ -87,18 +88,24 @@ while keep_going == "":
                         user_score += 1
 
                     valid = True
+                    round_summary = None
                     rounds_played += 1
                     print()
 
                 if cpu_score == win:
                     print("Sorry the computer won")
                     print("You have gotten to the end of the game")
+                    round_summary = "CPU Win"
                     round_continue = "no"
 
                 elif user_score == win:
                     print("You beat the computer!!!")
                     print("You have gotten to the end of the game")
+                    round_summary = "User Win"
                     round_continue = "no"
+
+                if round_summary is not None:
+                    game_summary.append(round_summary)
 
         else:
             print("Please enter an odd number as to ensure no ties")
@@ -108,7 +115,15 @@ while keep_going == "":
     games_played += 1
     if games_play == "c" or games_play == "continuous":
         keep_going = input("Press <enter> to play again or any key to quit ")
+        print()
     elif games_play == "r" or games_play == "round":
         if games_played == games_number:
             print("Thanks for playing")
             keep_going = "stop"
+
+print()
+print("Outcome for Each Round")
+list_count = 1
+for item in game_summary:
+    print("Round {}: {}".format(list_count, item))
+    list_count += 1

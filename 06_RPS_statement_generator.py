@@ -9,6 +9,10 @@ elif chosen_action == "paper":
     user_icon = "🧻"
 elif chosen_action == "scissors":
     user_icon = "✂"
+elif chosen_action == "lizard":
+    user_icon = "🦎"
+elif chosen_action == "spock":
+    user_icon = "🖖"
 
 if cpu_action == "rock":
     cpu_icon = "🥔"
@@ -16,6 +20,10 @@ elif cpu_action == "paper":
     cpu_icon = "🧻"
 elif cpu_action == "scissors":
     cpu_icon = "✂"
+elif cpu_action == "lizard":
+    cpu_icon = "🦎"
+elif cpu_action == "spock":
+    cpu_icon = "🖖"
 
 def rps_statement1(statement, char):
     print()
@@ -41,7 +49,13 @@ print()
 draw = rps_statement1("It was a draw", "-")
 
 print()
-round_start = rps_statement2("         Round 1         ", "=")
+round_start = rps_statement2("         Round {}         ", "=")
 
 print()
-game_start = rps_statement2("          Game 1         ", "◾")
+game_start = rps_statement2("          Game {}         ", "◾")
+
+print()
+computer_win = rps_statement2(" ✨ 💻 ✨ | The Computer beat you", "=")
+
+print()
+user_win = rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!!‍‍")
