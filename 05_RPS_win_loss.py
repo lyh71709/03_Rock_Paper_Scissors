@@ -16,11 +16,10 @@ round_continue = "yes"
 cpu_score = 0
 user_score = 0
 
-rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
-win = ((rounds//2)+1)
-print("You need {} wins to win".format(win))
-
 while round_continue == "yes":
+
+    rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
+    win = ((rounds//2)+1)
 
     if cpu_score == win:
         print("Sorry the computer won")
@@ -35,6 +34,8 @@ while round_continue == "yes":
     else:
         if (rounds % 2) == 1:
             rounds_played = 0
+            print("You need {} wins to win".format(win))
+            print()
 
             while cpu_score != win and user_score != win:
 

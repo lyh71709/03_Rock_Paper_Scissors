@@ -38,12 +38,9 @@ while keep_going == "":
 
     print("Game {}".format(games_played + 1))
 
-    rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
-    win = ((rounds//2)+1)
-    print("You need {} wins to win".format(win))
-    print()
-
     while round_continue == "yes":
+        rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
+        win = ((rounds//2)+1)
 
         if cpu_score == win:
             print("Sorry the computer won")
@@ -58,6 +55,8 @@ while keep_going == "":
         else:
             if (rounds % 2) == 1:
                 rounds_played = 0
+                print("You need {} wins to win".format(win))
+                print()
 
                 while cpu_score != win and user_score != win:
 
@@ -110,11 +109,12 @@ while keep_going == "":
                             user_score += 1
 
                         valid = True
-
+                        rounds_played += 1
                         print()
             else:
                 print("Please enter an odd number as to ensure no ties")
                 print()
+
 
     games_played += 1
 
@@ -124,4 +124,3 @@ while keep_going == "":
         if games_played == games_number:
             print("Thanks for playing")
             keep_going = "stop"
-
