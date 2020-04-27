@@ -81,10 +81,9 @@ while keep_going == "":
                         elif chosen_action == "spock":
                             game_outcome += 5
                         else:
-                            print("Please enter either Rock, Paper or Scissors")
+                            print("Please enter either Rock, Paper, Scissors, Lizard or Spock")
                             print()
                             continue
-                        print()
 
                         if cpu_action == "rock":
                             game_outcome -= 3
@@ -109,6 +108,7 @@ while keep_going == "":
                             print("You Won!!!")
                             user_score += 1
                         valid = True
+                        round_summary = None
                         rounds_played += 1
                         print()
 

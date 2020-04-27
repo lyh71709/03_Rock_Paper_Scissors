@@ -68,7 +68,7 @@ while keep_going == "":
                     elif chosen_action == "spock":
                         game_outcome += 5
                     else:
-                        print("Please enter either Rock, Paper or Scissors")
+                        print("Please enter either Rock, Paper, Scissors, Lizard or Spock")
                         print()
                         continue
 

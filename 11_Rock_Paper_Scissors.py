@@ -3,14 +3,14 @@
 print("Welcome to Rock, Paper, Scissors")
 print("The rules of this game are simple")
 print()
-print("The game is basically Rock, Paper, Scissors, with a couple touches.\n"
+print("The game is basically Rock, Paper, Scissors, with a couple extra features.\n"
       "The game will begin by asking you which gamemode you want to play. \n"
       "The gamemodes are RPS(Rock, Paper, Scissors) and RPSLS(Rock, Paper, Scissors,\n"
       "Lizard, Spock). Then the game will ask how many games you want to play, \n"
       "Rounds means that you will have a set amount of games to play to your choosing\n"
       "Continuous means that games will keep going until you decide when you want to stop.\n"
       "A couple things you should know putting the first letter of an action is fine\n"
-      "For example for rock you can put in 'r' or for continuous you can put in c and so and so.\n"
+      "For example for rock you can put in 'r' or for continuous you can put in c, for spock you can put in 'sp' and so on.\n"
       "")
 rpsls_help = input("Do you want me to tell you how 'Rock, Paper, Scissors, Lizard, Spock' works (Yes or No)? ").lower()
 
@@ -99,7 +99,7 @@ while keep_going == "":
     cpu_score = 0
     user_score = 0
     print()
-    game_start = rps_statement2("          Game {}   ".format(games_played + 1), "◾")
+    rps_statement2("          Game {}   ".format(games_played + 1), "◾")
 
     while round_continue == "yes":
         cpu_score = 0
@@ -112,7 +112,7 @@ while keep_going == "":
 
             if game_mode == "RPSLS":
                 while cpu_score != win and user_score != win:
-                    round_start = rps_statement2("         Round {}         ".format(rounds_played + 1), "=")
+                    rps_statement2("         Round {}         ".format(rounds_played + 1), "=")
                     valid = False
                     action = ["rock", "paper", "scissors", "lizard", "spock"]
 
@@ -121,19 +121,19 @@ while keep_going == "":
                         cpu_action = random.choice(action)
                         game_outcome = 0
 
-                        if chosen_action == "rock":
+                        if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
                             user_icon = "🥔"
-                        elif chosen_action == "paper":
+                        elif chosen_action == "paper" or chosen_action == "p":
                             game_outcome += 2
                             user_icon = "🧻"
-                        elif chosen_action == "scissors":
+                        elif chosen_action == "scissors" or chosen_action == "s":
                             game_outcome += 1
                             user_icon = "✂"
-                        elif chosen_action == "lizard":
+                        elif chosen_action == "lizard" or chosen_action == "l":
                             game_outcome += 4
                             user_icon = "🦎"
-                        elif chosen_action == "spock":
+                        elif chosen_action == "spock" or chosen_action == "sp":
                             game_outcome += 5
                             user_icon = "🖖"
                         else:
@@ -160,96 +160,97 @@ while keep_going == "":
 
                         if game_outcome == 0:
                             print("The computer used {}".format(cpu_action))
-                            draw = rps_statement1("It was a draw", "-")
+                            rps_statement1("It was a draw", "-")
                         elif game_outcome == 1 or game_outcome == -2 or game_outcome == -4 or game_outcome == 3:
                             print("The computer used {}".format(cpu_action))
-                            lose = rps_statement1("Sorry you lost", "-")
+                            rps_statement1("Sorry you lost", "-")
                             cpu_score += 1
                         else:
                             print("The computer used {}".format(cpu_action))
-                            win = rps_statement1("You Win!!!","-")
+                            rps_statement1("You Win!!!","-")
                             user_score += 1
                         valid = True
                         round_summary = None
                         rounds_played += 1
+                        print("Computer Score: {}".format(cpu_score))
+                        print("Your Score: {}".format(user_score))
 
-                    if cpu_score == win:
-                        print("Sorry the computer won")
-                        print()
-                        round_summary = "CPU Win"
-                        round_continue = "no"
-                    elif user_score == win:
-                        print("You beat the computer!!!")
-                        print()
-                        round_summary = "User Win"
-                        round_continue = "no"
+                        if cpu_score == win:
+                            rps_statement2(" ✨ 💻 ✨ | The Computer beat you   ", "-")
+                            round_summary = "CPU Win"
+                            round_continue = "no"
+                        elif user_score == win:
+                            rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!! ‍‍", "-")
+                            round_summary = "User Win"
+                            round_continue = "no"
 
-                    if round_summary is not None:
-                        game_summary.append(round_summary)
+                        if round_summary is not None:
+                            game_summary.append(round_summary)
 
             if game_mode == "RPS":
-                    while cpu_score != win and user_score != win:
-                        print("Round {}".format(rounds_played + 1))
-                        valid = False
-                        action = ["rock", "paper", "scissors"]
+                while cpu_score != win and user_score != win:
+                    round_start = rps_statement2("         Round {}         ".format(rounds_played + 1), "=")
+                    valid = False
+                    action = ["rock", "paper", "scissors"]
 
-                        while valid == False:
-                            chosen_action = input("What are you going to do (Rock/Paper/Scissors)? ").lower()
-                            cpu_action = random.choice(action)
-                            game_outcome = 0
+                    while valid == False:
+                        chosen_action = input("What are you going to do (Rock/Paper/Scissors)? ").lower()
+                        cpu_action = random.choice(action)
+                        game_outcome = 0
 
-                            if chosen_action == "rock":
-                                game_outcome += 3
-                                user_icon = "🥔"
-                            elif chosen_action == "paper":
-                                game_outcome += 2
-                                user_icon = "🧻"
-                            elif chosen_action == "scissors":
-                                game_outcome += 1
-                                user_icon = "✂"
-                            else:
-                                print("Please enter either Rock, Paper or Scissors")
-                                print()
-                                continue
+                        if chosen_action == "rock" or chosen_action == "r":
+                            game_outcome += 3
+                            user_icon = "🥔"
+                        elif chosen_action == "paper" or chosen_action == "p":
+                            game_outcome += 2
+                            user_icon = "🧻"
+                        elif chosen_action == "scissors" or chosen_action == "s":
+                            game_outcome += 1
+                            user_icon = "✂"
+                        else:
+                            print("Please enter either Rock, Paper or Scissors")
+                            print()
+                            continue
 
-                            if cpu_action == "rock":
-                                game_outcome -= 3
-                                cpu_icon = "🥔"
-                            elif cpu_action == "paper":
-                                game_outcome -= 2
-                                cpu_icon = "🧻"
-                            else:
-                                game_outcome -= 1
-                                cpu_icon = "✂"
+                        if cpu_action == "rock":
+                            game_outcome -= 3
+                            cpu_icon = "🥔"
+                        elif cpu_action == "paper":
+                            game_outcome -= 2
+                            cpu_icon = "🧻"
+                        else:
+                            game_outcome -= 1
+                            cpu_icon = "✂"
 
-                            if game_outcome == 0:
-                                print("The computer used {}".format(cpu_action))
-                                draw = rps_statement1("It was a draw", "-")
-                            elif game_outcome == 1 or game_outcome == -2:
-                                print("The computer used {}".format(cpu_action))
-                                lose = rps_statement1("Sorry you lost", "-")
-                                cpu_score += 1
-                            else:
-                                print("The computer used {}".format(cpu_action))
-                                win = rps_statement1("You Win!!!","-")
-                                user_score += 1
+                        if game_outcome == 0:
+                            print("The computer used {}".format(cpu_action))
+                            rps_statement1("It was a draw", "-")
+                        elif game_outcome == 1 or game_outcome == -2:
+                            print("The computer used {}".format(cpu_action))
+                            rps_statement1("Sorry you lost", "-")
+                            cpu_score += 1
+                        else:
+                            print("The computer used {}".format(cpu_action))
+                            rps_statement1("You Win!!!","-")
+                            user_score += 1
 
-                            valid = True
-                            rounds_played += 1
+                        valid = True
+                        round_summary = None
+                        rounds_played += 1
+                        print("Computer Score: {}".format(cpu_score))
+                        print("Your Score: {}".format(user_score))
 
-                            if cpu_score == win:
-                                print("The computer beat you")
-                                print()
-                                round_summary = "CPU Win"
-                                round_continue = "no"
-                            elif user_score == win:
-                                print("You beat the computer!!!")
-                                print()
-                                round_summary = "User Win"
-                                round_continue = "no"
+                        if cpu_score == win:
+                            rps_statement2(" ✨ 💻 ✨ | The Computer beat you   ", "◽")
+                            round_summary = "CPU Win"
+                            round_continue = "no"
+                        elif user_score == win:
+                            rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!! ‍‍", "◽")
+                            round_summary = "User Win"
+                            round_continue = "no"
 
-                            if round_summary is not None:
-                                game_summary.append(round_summary)
+                        if round_summary is not None:
+                            game_summary.append(round_summary)
         else:
             print("Please enter an odd number as to ensure no ties")
             print()

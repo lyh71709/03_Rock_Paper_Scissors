@@ -55,7 +55,7 @@ print()
 game_start = rps_statement2("          Game {}         ", "◾")
 
 print()
-computer_win = rps_statement2(" ✨ 💻 ✨ | The Computer beat you", "=")
+computer_win = rps_statement2(" ✨ 💻 ✨ | The Computer beat you   ", "◽")
 
 print()
-user_win = rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!!‍‍")
+user_win = rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!! ‍‍", "◽")
