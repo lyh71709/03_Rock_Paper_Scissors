@@ -1,5 +1,6 @@
 # RPS - Complete Game
 
+# Introduction and Rules
 print("Welcome to Rock, Paper, Scissors")
 print("The rules of this game are simple")
 print()
@@ -14,6 +15,7 @@ print("The game is basically Rock, Paper, Scissors, with a couple extra features
       "")
 rpsls_help = input("Do you want me to tell you how 'Rock, Paper, Scissors, Lizard, Spock' works (Yes or No)? ").lower()
 
+# RPSLS rules
 if rpsls_help == "yes" or rpsls_help == "y":
       print()
       print("Well, Scissors cuts Paper,\n"
@@ -26,7 +28,7 @@ if rpsls_help == "yes" or rpsls_help == "y":
           "Paper disproves Spock,\n"
           "Spock vaporizes Rock,\n"
           "and as it always has, Rock crushes Scissors,\n"
-            "\n"
+          "\n"
           "Now let the game begin!")
 
 elif rpsls_help == "no" or rpsls_help == "n":
@@ -39,6 +41,7 @@ else:
 
 import random
 
+# Statement Definition
 def rps_statement1(statement, char):
     print()
     print(char*(len(statement)+12))
@@ -53,6 +56,7 @@ def rps_statement2(statement, char):
     print(char*len(statement))
     print()
 
+# Integer checker
 def intcheck(question):
     while True:
         try:
@@ -65,6 +69,7 @@ def intcheck(question):
             print()
             continue
 
+# Function that switches the gamemode from RPS to RPSLS
 valid3 = False
 while valid3 == False:
     game_mode = input("What gamemode would you like to play? (RPS or RPSLS) ").upper()
@@ -77,6 +82,7 @@ while valid3 == False:
     else:
         print("Please enter either RPS or RPSLS")
 
+# Function that switches the amount of games from continuous mode to round mode
 print()
 valid2 = False
 while valid2 == False:
@@ -91,6 +97,7 @@ while valid2 == False:
         print("Please enter either round or continuous ")
         continue
 
+# Main Game Function
 game_summary = []
 games_played = 0
 keep_going = ""
@@ -110,6 +117,7 @@ while keep_going == "":
             rounds_played = 0
             print("You need {} wins to win".format(win))
 
+            # RPSLS Game Functions
             if game_mode == "RPSLS":
                 while cpu_score != win and user_score != win:
                     rps_statement2("         Round {}         ".format(rounds_played + 1), "=")
@@ -187,6 +195,7 @@ while keep_going == "":
                         if round_summary is not None:
                             game_summary.append(round_summary)
 
+            # RPS Game Functions
             if game_mode == "RPS":
                 while cpu_score != win and user_score != win:
                     round_start = rps_statement2("         Round {}         ".format(rounds_played + 1), "=")
@@ -255,6 +264,7 @@ while keep_going == "":
             print("Please enter an odd number as to ensure no ties")
             print()
 
+    # Code ending functions
     games_played += 1
     if games_play == "c" or games_play == "continuous":
         keep_going = input("Press <enter> to play again or any key to quit ")
@@ -263,6 +273,7 @@ while keep_going == "":
             print("Thanks for playing")
             keep_going = "stop"
 
+# Game Summary
 print()
 print("Outcome for Each Round")
 list_count = 1
