@@ -94,13 +94,11 @@ while keep_going == "":
 
                 if cpu_score == win:
                     print("Sorry the computer won")
-                    print("You have gotten to the end of the game")
                     round_summary = "CPU Win"
                     round_continue = "no"
 
                 elif user_score == win:
                     print("You beat the computer!!!")
-                    print("You have gotten to the end of the game")
                     round_summary = "User Win"
                     round_continue = "no"
 

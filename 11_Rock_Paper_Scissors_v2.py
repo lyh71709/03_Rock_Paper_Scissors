@@ -131,7 +131,7 @@ while keep_going == "":
 
                         if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
-                            user_icon = "🥔"
+                            user_icon = "🧱"
                         elif chosen_action == "paper" or chosen_action == "p":
                             game_outcome += 2
                             user_icon = "🧻"
@@ -152,7 +152,7 @@ while keep_going == "":
 
                         if cpu_action == "rock":
                             game_outcome -= 3
-                            cpu_icon = "🥔"
+                            cpu_icon = "🧱"
                         elif cpu_action == "paper":
                             game_outcome -= 2
                             cpu_icon = "🧻"
@@ -184,11 +184,11 @@ while keep_going == "":
                         print("Your Score: {}".format(user_score))
 
                         if cpu_score == win:
-                            rps_statement2(" ✨ 💻 ✨ | The Computer beat you   ", "-")
+                            rps_statement2(" ✨ 💻 ✨ | The Computer beat you   ", "◽")
                             round_summary = "CPU Win"
                             round_continue = "no"
                         elif user_score == win:
-                            rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!! ‍‍", "-")
+                            rps_statement2(" ✨ 👨 ✨ | You beat the Computer!!! ‍‍", "◽")
                             round_summary = "User Win"
                             round_continue = "no"
 
@@ -209,7 +209,7 @@ while keep_going == "":
 
                         if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
-                            user_icon = "🥔"
+                            user_icon = "🧱"
                         elif chosen_action == "paper" or chosen_action == "p":
                             game_outcome += 2
                             user_icon = "🧻"
@@ -223,7 +223,7 @@ while keep_going == "":
 
                         if cpu_action == "rock":
                             game_outcome -= 3
-                            cpu_icon = "🥔"
+                            cpu_icon = "🧱"
                         elif cpu_action == "paper":
                             game_outcome -= 2
                             cpu_icon = "🧻"

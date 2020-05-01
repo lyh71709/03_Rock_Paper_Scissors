@@ -4,7 +4,7 @@ chosen_action = input("What is the player's action? ").lower()
 cpu_action = input("What is the CPU's action? ").lower()
 
 if chosen_action == "rock":
-    user_icon = "🥔"
+    user_icon = "🧱"
 elif chosen_action == "paper":
     user_icon = "🧻"
 elif chosen_action == "scissors":
@@ -15,7 +15,7 @@ elif chosen_action == "spock":
     user_icon = "🖖"
 
 if cpu_action == "rock":
-    cpu_icon = "🥔"
+    cpu_icon = "🧱"
 elif cpu_action == "paper":
     cpu_icon = "🧻"
 elif cpu_action == "scissors":
