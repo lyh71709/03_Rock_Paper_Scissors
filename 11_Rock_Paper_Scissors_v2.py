@@ -1,6 +1,7 @@
 # RPS - Complete Game
 
 # Introduction and Rules
+# Prints the rules to make the code more usable for the user
 print("Welcome to Rock, Paper, Scissors")
 print("The rules of this game are simple")
 print()
@@ -16,6 +17,7 @@ print("The game is basically Rock, Paper, Scissors, with a couple extra features
 rpsls_help = input("Do you want me to tell you how 'Rock, Paper, Scissors, Lizard, Spock' works (Yes or No)? ").lower()
 
 # RPSLS rules
+# Ask user if the user wants the rules for RPSLS
 if rpsls_help == "yes" or rpsls_help == "y":
       print()
       print("Well, Scissors cuts Paper,\n"
@@ -129,6 +131,7 @@ while keep_going == "":
                         cpu_action = random.choice(action)
                         game_outcome = 0
 
+                        # RPSLS chosen action modifiers
                         if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
                             user_icon = "🧱"
@@ -207,6 +210,7 @@ while keep_going == "":
                         cpu_action = random.choice(action)
                         game_outcome = 0
 
+                        # RPS chosen action modifiers
                         if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
                             user_icon = "🧱"

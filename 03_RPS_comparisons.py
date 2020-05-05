@@ -7,6 +7,7 @@ while valid == False:
     chosen_action = input("What are you going to do (Rock/Paper/Scissors)? ").lower()
     cpu_action = "rock"
 
+    # Rock outcomes
     if chosen_action == "rock":
 
         if cpu_action == "rock":
@@ -23,6 +24,7 @@ while valid == False:
 
         valid = True
 
+    # Paper outcomes
     elif chosen_action == "paper":
 
         if cpu_action == "rock":
@@ -39,6 +41,7 @@ while valid == False:
 
         valid = True
 
+    # Scissors outcomes
     elif chosen_action == "scissors":
 
         if cpu_action == "rock":

@@ -12,6 +12,7 @@ def intcheck(question):
             print()
             continue
 
+# Allow user to choose between continuous and round mode
 valid2 = False
 while valid2 == False:
     games_play = input("How many games would you like to play? (Round or Continuous Play) ").lower()
@@ -25,6 +26,7 @@ while valid2 == False:
         print("Please enter either round or continuous ")
         continue
 
+# Main Game
 game_summary = []
 print()
 games_played = 0

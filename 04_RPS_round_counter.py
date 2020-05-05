@@ -21,6 +21,7 @@ round_continue = "yes"
 while round_continue == "yes":
     rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
 
+    # Generate rounds
     if (rounds % 2) == 1:
         rounds_played = 0
 
@@ -31,6 +32,7 @@ while round_continue == "yes":
         print("You have gotten to the end of the game")
         round_continue = "no"
 
+    # Error message
     else:
         print("Please enter an odd number as to ensure no ties")
         print()

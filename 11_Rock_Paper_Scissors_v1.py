@@ -127,6 +127,7 @@ while keep_going == "":
                         cpu_action = random.choice(action)
                         game_outcome = 0
 
+                        # RPSLS chosen action modifiers
                         if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
                             user_icon = "🧱"
@@ -203,6 +204,7 @@ while keep_going == "":
                         cpu_action = random.choice(action)
                         game_outcome = 0
 
+                        # RPS chosen action modifiers
                         if chosen_action == "rock" or chosen_action == "r":
                             game_outcome += 3
                             user_icon = "🧱"

@@ -57,6 +57,7 @@ while keep_going == "":
                     cpu_action = "rock"
                     game_outcome = 0
 
+                    # Assign modifiers to actions
                     if chosen_action == "rock":
                         game_outcome += 3
                     elif chosen_action == "paper":
@@ -83,6 +84,7 @@ while keep_going == "":
                     else:
                         game_outcome -= 5
 
+                    # Outcome messages
                     if game_outcome == 0:
                         print("The computer used {}".format(cpu_action))
                         print("It was a draw")

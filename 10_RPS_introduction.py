@@ -12,6 +12,8 @@ print("The game is basically Rock, Paper, Scissors, with a couple touches.\n"
       "A couple things you should know putting the first letter of an action is fine\n"
       "For example for rock you can put in 'r' or for continuous you can put in c and so and so.\n"
       "")
+  
+# Ask user is the user wants the rules for RPSLS
 rpsls_help = input("Do you want me to tell you how 'Rock, Paper, Scissors, Lizard, Spock' works (Yes or No)? ").lower()
 
 if rpsls_help == "yes" or rpsls_help == "y":

@@ -19,9 +19,11 @@ user_score = 0
 
 while round_continue == "yes":
 
+    # get rounds and calculate win
     rounds = intcheck("The game will be best out of what (Must be an odd number)? ")
     win = ((rounds//2)+1)
 
+    # Check if the rounds is a odd number
     if (rounds % 2) == 1:
         rounds_played = 0
         print("You need {} wins to win".format(win))
@@ -33,7 +35,8 @@ while round_continue == "yes":
 
             valid = False
             action = ["rock", "paper", "scissors"]
-
+            
+            # Using the code from Comparisons v2
             while valid == False:
                 chosen_action = input("What are you going to do (Rock/Paper/Scissors)? ").lower()
                 cpu_action = "rock"
@@ -72,7 +75,8 @@ while round_continue == "yes":
                 valid = True
                 rounds_played += 1
                 print()
-
+            
+            # Win / Loss messages
             if cpu_score == win:
                 print("Sorry the computer won")
                 print("You have gotten to the end of the game")
@@ -82,7 +86,7 @@ while round_continue == "yes":
                 print("You beat the computer!!!")
                 print("You have gotten to the end of the game")
                 round_continue = "no"
-
+    # Error
     else:
         print("Please enter an odd number as to ensure no ties")
         print()

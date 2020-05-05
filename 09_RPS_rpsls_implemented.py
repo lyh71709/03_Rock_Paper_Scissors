@@ -14,6 +14,7 @@ def intcheck(question):
             print()
             continue
 
+# Have a way to switch between RPS and RPSLS
 valid3 = False
 while valid3 == False:
     game_mode = input("What gamemode would you like to play? (RPS or RPSLS) ").upper()
@@ -50,6 +51,7 @@ while keep_going == "":
     print()
     print("Game {}".format(games_played + 1))
 
+    # RPSLS Game function
     while round_continue == "yes":
         cpu_score = 0
         user_score = 0
@@ -126,6 +128,7 @@ while keep_going == "":
                     if round_summary is not None:
                         game_summary.append(round_summary)
 
+            # RPS Game function
             if game_mode == "RPS":
                     while cpu_score != win and user_score != win:
                         print("Round {}".format(rounds_played + 1))
@@ -189,6 +192,7 @@ while keep_going == "":
             print("Please enter an odd number as to ensure no ties")
             print()
 
+    # End of gamemodes
     games_played += 1
     if games_play == "c" or games_play == "continuous":
         keep_going = input("Press <enter> to play again or any key to quit ")
@@ -197,6 +201,7 @@ while keep_going == "":
             print("Thanks for playing")
             keep_going = "stop"
 
+# Game Summary
 print()
 print("Outcome for Each Round")
 list_count = 1

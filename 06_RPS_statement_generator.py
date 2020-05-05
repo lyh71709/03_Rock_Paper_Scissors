@@ -3,6 +3,7 @@
 chosen_action = input("What is the player's action? ").lower()
 cpu_action = input("What is the CPU's action? ").lower()
 
+# Assign icons
 if chosen_action == "rock":
     user_icon = "🧱"
 elif chosen_action == "paper":
